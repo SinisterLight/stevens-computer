@@ -356,18 +356,15 @@ body.scrolled .chrome::after{opacity:0}
   .vlt-art{width:min(460px,100%);margin-inline:auto}
   .vlt-lede{font-size:15px;margin-top:12px}.vlt-muted{font-size:13.5px;margin-top:10px}}
 
-/* GET STEVENS — where the header's "Get Stevens" lands. the stores are not open
-   yet, so both are shown, named and disabled: no link, no tap, "Coming soon". */
+/* GET STEVENS — where the header's "Get Stevens" lands: the heading, then the two
+   stores, named and disabled (no link, no tap, "Coming soon") until they open. */
 .get{padding:var(--sec-y) var(--gutter) 0}
 .get-wrap{width:var(--rail);margin:0 auto}
 .get-title{max-width:18ch}
-.get-lede{font-family:var(--body);font-size:clamp(16px,1.2vw,18px);line-height:1.5;color:var(--ink);
-  max-width:52ch;margin:var(--stack-title-lede) 0 0}
-.get-muted{font-size:15px;line-height:1.5;color:var(--muted);max-width:52ch;margin:10px 0 0}
 .get-stores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--row-gap) clamp(20px,3vw,48px);
   margin-top:var(--stack-lede-art);max-width:760px}
 .store{display:flex;align-items:center;gap:16px;width:100%;text-align:left;font:inherit;
-  border:0;border-top:1px solid var(--rule);background:none;padding:20px 0 0;color:var(--ink);cursor:not-allowed}
+  border:0;background:none;padding:0;color:var(--ink);cursor:not-allowed}
 .store-ic{flex:none;width:52px;height:52px;border-radius:14px;border:1px solid var(--rule);background:var(--white);
   display:flex;align-items:center;justify-content:center;color:var(--ink);opacity:.55}
 .store-ic svg{width:24px;height:24px;display:block}
@@ -377,8 +374,7 @@ body.scrolled .chrome::after{opacity:0}
 .store-soon{margin-left:auto;flex:none;font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--violet);border:1px solid var(--accent-soft);border-radius:999px;padding:6px 10px}
 @media (max-width:639px){
-  .get-stores{grid-template-columns:1fr}
-  .get-lede{font-size:15px;margin-top:12px}.get-muted{font-size:13.5px}}
+  .get-stores{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.stp{opacity:1;transform:none}.vxs{display:none}.vxw i,.vxo,.vxo::after{animation:none}
 }
 </style>
@@ -523,9 +519,7 @@ body.scrolled .chrome::after{opacity:0}
 <!-- ================= GET STEVENS ================= -->
 <section class="get" data-bg="#FAF6EE" data-on="#151715" id="get" aria-labelledby="get-title">
   <div class="get-wrap">
-    <h2 class="get-title" id="get-title">First, on your phone.</h2>
-    <p class="get-lede">Stevens first comes to you as an app on your phone. It is his first presence in your household.</p>
-    <p class="get-muted">The apps are on their way. They will be here when they open.</p>
+    <h2 class="get-title" id="get-title">Stevens on your phone.</h2>
     <div class="get-stores">
       <button class="store" type="button" disabled aria-disabled="true">
         <span class="store-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
