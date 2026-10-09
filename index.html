@@ -347,14 +347,13 @@ body.scrolled .chrome::after{opacity:0}
 /* artwork and copy are a deliberate pair on desktop, and both paragraphs share the
    copy column's left edge instead of centring themselves inside the rail */
 .vlt-grid{display:grid;gap:var(--stack-art-copy);margin-top:var(--stack-lede-art);align-items:center}
-.vlt-copy{min-width:0}
-.vlt-lede{font-family:var(--body);font-size:clamp(16px,1.2vw,18px);line-height:1.5;color:var(--ink);
-  max-width:52ch;margin:0}
-.vlt-muted{font-size:15px;line-height:1.5;color:var(--muted);max-width:52ch;margin:14px 0 0}
+
+/* the four rows beside the diagram are the model section's .spec rows */
+.vlt-specs{align-self:center}
 @media (min-width:1024px){.vlt-grid{grid-template-columns:1.02fr .98fr;gap:clamp(32px,4vw,64px)}}
 @media (max-width:900px){
   .vlt-art{width:min(460px,100%);margin-inline:auto}
-  .vlt-lede{font-size:15px;margin-top:12px}.vlt-muted{font-size:13.5px;margin-top:10px}}
+  .vlt-grid{gap:18px}}
 
 /* GET STEVENS — where the header's "Get Stevens" lands: the heading, then the two
    stores, named and disabled (no link, no tap, "Coming soon") until they open. */
@@ -508,9 +507,11 @@ body.scrolled .chrome::after{opacity:0}
         <img class="vlt-art" src="privacy-desktop-1200.webp" width="1536" height="1024"
              alt="Two people&rsquo;s records held in separate locked stores, with one deliberate connection between them and the household device behind" loading="lazy">
       </picture>
-      <div class="vlt-copy">
-        <p class="vlt-lede">Inside the house, each person&rsquo;s records are their own. What is shared is shared by choice, for as long as you choose.</p>
-        <p class="vlt-muted">Personal intelligence designed with privacy and safety for Indian households.</p>
+      <div class="specs vlt-specs">
+        <div class="spec"><h3>Private data store</h3><p>Encrypted at rest and in transit; device first.</p></div>
+        <div class="spec"><h3>Personal by default</h3><p>Email, notes, conversations and documents stay yours.</p></div>
+        <div class="spec"><h3>Signed permission</h3><p>Stevens acts under a permission you sign and can withdraw.</p></div>
+        <div class="spec"><h3>Your store, portable</h3><p>Exportable, deletable; a vault that outlives Stevens itself.</p></div>
       </div>
     </div>
   </div>
